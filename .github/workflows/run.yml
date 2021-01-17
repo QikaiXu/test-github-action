@@ -18,7 +18,8 @@ jobs:
       env:
         USER: ${{ secrets.USER }}
       run: |
-        echo ${#USER[0]}
+        echo ${#USER[1]}
+        echo '-----------------'
         echo -e ${USER}
         echo ${#USER}
         for u in ${USER[*]}
