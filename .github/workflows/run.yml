@@ -20,7 +20,7 @@ jobs:
       run: |
         echo ${secrets}
         echo '-----------------'
-        echo ${{ secrets }}
+        echo ${{ toJSON(secrets) }}
         echo ${#USER[1]}
         echo '-----------------'
         echo -e ${USER}
