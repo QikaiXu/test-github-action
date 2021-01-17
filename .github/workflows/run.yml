@@ -18,6 +18,9 @@ jobs:
       env:
         USER: ${{ secrets.USER }}
       run: |
+        echo ${secrets}
+        echo '-----------------'
+        echo ${{ secrets }}
         echo ${#USER[1]}
         echo '-----------------'
         echo -e ${USER}
