@@ -1,5 +1,5 @@
 import os
 
 USER = os.getenv('USER')
-print('-{}-'.format(USER[:9]))
+print('-{}-'.format(USER[:8]))
 
