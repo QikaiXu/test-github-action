@@ -18,9 +18,6 @@ jobs:
       env:
         USER: ${{ secrets.USER }}
       run: |
-        echo ${secrets}
-        echo '-----------------'
-        echo ${{ secrets.USER }}
         echo ${#USER[1]}
         echo '-----------------'
         echo -e ${USER}
@@ -30,6 +27,8 @@ jobs:
           echo ${#u}
         done
         python3 main.py
+        1
+        2
         bash main.sh
         
         PASS="username1\npassword2"
