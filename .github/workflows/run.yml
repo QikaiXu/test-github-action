@@ -1,0 +1,16 @@
+on: 
+  push:
+  watch: 
+    types: [ started ]
+
+jobs:
+  test-secret:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-secret
+        env:
+          USER: ${{ secret.USER }}
+        run: |
+          echo ${USER}
+
+
