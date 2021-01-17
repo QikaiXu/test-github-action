@@ -13,7 +13,7 @@ jobs:
         run: |
           echo ${USER}
           echo ${#USER}
-          for u in ${USER}
+          for u in ${USER[*]}
           do
             echo ${#u}
           done
