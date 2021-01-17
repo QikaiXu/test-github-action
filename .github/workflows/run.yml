@@ -18,6 +18,7 @@ jobs:
       env:
         USER: ${{ secrets.USER }}
       run: |
+
         echo -e ${USER}
         echo ${#USER}
         for u in ${USER[*]}
@@ -26,6 +27,12 @@ jobs:
         done
         python3 main.py
         bash main.sh
-
+        
+        PASS="username1\npassword2"
+        echo -e ${PASS}
+        for u in ${PASS[*]}
+        do
+          echo ${#u}
+        done
 
 
