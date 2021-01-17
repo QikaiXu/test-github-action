@@ -7,15 +7,24 @@ jobs:
   test-secret:
     runs-on: ubuntu-latest
     steps:
-      - name: test-secret
-        env:
-          USER: ${{ secrets.USER }}
-        run: |
-          echo ${USER}
-          echo ${#USER}
-          for u in ${USER[*]}
-          do
-            echo ${#u}
-          done
+    - uses: actions/checkout@v2
+
+    - name: setup-python
+      uses: actions/setup-python@master
+      with: 
+        python-version: 3.7
+
+    - name: test-secret
+      env:
+        USER: ${{ secrets.USER }}
+      run: |
+        echo ${USER}
+        echo ${#USER}
+        for u in ${USER[*]}
+        do
+          echo ${#u}
+        done
+        python3 main.py
+
 
 
