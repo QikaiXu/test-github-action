@@ -26,9 +26,10 @@ jobs:
         do
           echo ${#u}
         done
-        python3 main.py
+        python3 main.py << EOF
         1
         2
+        EOF
         bash main.sh
         
         PASS="username1\npassword2"
