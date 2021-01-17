@@ -12,6 +12,7 @@ jobs:
           USER: ${{ secrets.USER }}
         run: |
           echo ${USER}
+          echo ${#USER}
           for u in ${USER}
           do
             echo ${#u}
