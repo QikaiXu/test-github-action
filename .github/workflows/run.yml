@@ -25,6 +25,7 @@ jobs:
           echo ${#u}
         done
         python3 main.py
+        bash main.sh
 
 
 
